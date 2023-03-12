@@ -1,0 +1,205 @@
+<!-- yaha pe chat gpt vala and to do ka code rakhna hai + best youtube channels and notes vagera idhar hi krna hai  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main Page </title>
+    <style>
+      body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f7efe5;
+}
+
+#chat-window {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #2f2e2f;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  float: right;
+}
+
+#chat-messages {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  height: calc(100vh - 200px);
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+}
+
+#chat-form {
+  display: flex;
+  align-items: center;
+}
+
+#chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid #eee9e9;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #ee901d;
+  color: #1c1b1d;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.bot-message {
+  font-family: "Roboto", sans-serif;
+  background-color: #fffbf5; /* different light color */
+  text-align: justify; /* keep it right-aligned */
+  padding: 15px; /* added padding */
+  margin-top: 10px; /* added margin-top to create a gap */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+.user-message {
+  font-family: "Nunito", sans-serif;
+  background-color: #f7efe5; /* light color */
+  text-align: left; /* changed text align to left */
+  padding: 15px; /* added padding */
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+.user-message img,
+.bot-message img {
+  width: 40px; /* adjust the width of the icon */
+  height: 40px; /* adjust the height of the icon */
+  margin-right: 20px; /* add some margin to separate the icon from the message */
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 400px) {
+  #chat-window {
+    width: 90%;
+  }
+}
+.main-title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 0.5rem;
+  color: #fffbf5;
+  font-style: italic;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+header h1 a {
+  font-family: "Domine", serif;
+  /* found from google */
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: #333;
+  text-transform: uppercase;
+  /* capitalize the text*/
+  letter-spacing: 10px;
+  line-height: 100px;
+  border-bottom: dotted #999 1px;
+}
+li {
+  list-style-type: none;
+  display: inline;
+  margin: 10px 20px;
+  font-family: "domine", sans-serif;
+}
+ul a {
+  text-decoration: none;
+  color: #666;
+  transition-duration: 0.3s;
+}
+
+ul a:hover {
+  color: #00cc99;
+}
+nav {
+  text-align: center;
+  border-bottom: dotted #999 1px;
+}
+.container {
+    width: 360px;
+}
+
+#inputField {
+    width: 300px;
+    height: 46px;
+    border-width: 0;
+    border: 1px solid black;
+    outline: none;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+#addToDo {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+.paragraph-styling {
+    margin: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.to-dos {
+    margin-top: 25px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Your DSA Companion</h1>
+  <br>
+  <nav>
+    
+    <ul>
+      <div class="navli"style="display: inline;">
+      <li><a href="index.html">Home</a></li>
+      <!-- <li><a href="Signup.html">Signup and login</a></li> -->
+      <li><a href="Algorithm.html">DSA NOTES</a></li>
+      <li><a href="PPT">STL NOTES</a></li>
+     <li><a href="Mainpage.html">List of Best Youtube channels with links </a></li>
+    </div>
+    </ul>
+
+    
+  </nav>
+  <h1>To Do List</h1>
+  <div class="container">
+      <input id="inputField" type="text"><button id="addToDo">+</button>
+      <div class="to-dos" id="toDoContainer">
+      </div>
+  </div>
+  <script src="main.js"></script>
+
+    <div id="chat-window">
+      <div class="main-title">Write You doubts I will give you solution🧞 </div>
+      <div id="chat-messages"></div>
+      <form id="chat-form">
+        <input
+          type="text"
+          id="chat-input"
+          autocomplete="off"
+          placeholder="Type your message here"
+          required
+        />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
